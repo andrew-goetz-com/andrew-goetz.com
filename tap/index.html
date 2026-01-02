@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Add Andrew Goetz to Contacts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #00FF41;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.95);
+            border: 3px solid #00FF41;
+            border-radius: 15px;
+            box-shadow: 0px 0px 30px rgba(0, 255, 65, 0.7);
+            position: relative;
+            z-index: 10;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 3px solid #00FF41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+            filter: grayscale(100%) brightness(0.7) contrast(1.2) hue-rotate(90deg);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00FF41;
+            text-shadow: 0px 0px 15px rgba(0, 255, 65, 0.75);
+            margin-bottom: 10px;
+            animation: pulseGlow 2s infinite ease-in-out;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                text-shadow: 0px 0px 15px rgba(0, 255, 65, 0.75);
+            }
+            50% {
+                text-shadow: 0px 0px 25px rgba(0, 255, 65, 1);
+            }
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #00FF41;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background-color: #00FF41;
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 2px solid #00FF41;
+            box-shadow: 0px 0px 20px rgba(0, 255, 65, 0.6);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: #000;
+            color: #00FF41;
+            box-shadow: 0px 0px 30px rgba(0, 255, 65, 0.9);
+            transform: scale(1.05);
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        .info-text {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #00FF41;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* Matrix Falling Code Background */
+        .matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: #000;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            .cta-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+            .container {
+                padding: 30px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<canvas class="matrix-canvas"></canvas>
+
+<div class="container">
+    <img src="https://avatars.githubusercontent.com/u/8998358?s=400&u=fa784999fd34e27a6d430477d4981aa7e7bd2e00&v=4" 
+         alt="Andrew Goetz" 
+         class="avatar">
+    
+    <h1>Andrew Goetz</h1>
+    <p class="subtitle">Software Developer | AI Enthusiast</p>
+    
+    <a href="/contact/andrew-goetz.vcf" class="cta-button">
+        Add to Contacts
+    </a>
+    
+    <p class="info-text">
+        Tap the button above to save my contact information to your device.
+        <br>
+        Your device will prompt you to confirm before adding the contact.
+    </p>
+</div>
+
+<!-- Matrix Falling Code Effect -->
+<script>
+    const canvas = document.querySelector('.matrix-canvas');
+    const ctx = canvas.getContext('2d');
+
+    // Matrix characters
+    const matrixChars = 'アカサタナハマヤラワ0123456789ﾊﾐﾍｳｼ*+-/<=>?@#$%^&*()';
+    const fontSize = 16;
+    let columns;
+    let drops;
+
+    // Initialize the canvas and drops
+    function initializeMatrix() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        columns = Math.floor(canvas.width / fontSize);
+        drops = Array(columns).fill(0);
+    }
+
+    // Draw the characters
+    function drawMatrix() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#00FF41';
+        ctx.font = `${fontSize}px monospace`;
+
+        for (let i = 0; i < drops.length; i++) {
+            const text = matrixChars.charAt(Math.floor(Math.random() * matrixChars.length));
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+            ctx.fillText(text, x, y);
+
+            if (y > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+
+    // Initialize and start the animation using requestAnimationFrame
+    initializeMatrix();
+    let lastFrameTime = 0;
+    const targetFPS = 20; // Target 20 FPS for the Matrix effect
+    const frameInterval = 1000 / targetFPS;
+
+    function animate(currentTime) {
+        requestAnimationFrame(animate);
+        
+        const elapsed = currentTime - lastFrameTime;
+        if (elapsed > frameInterval) {
+            lastFrameTime = currentTime - (elapsed % frameInterval);
+            drawMatrix();
+        }
+    }
+    
+    requestAnimationFrame(animate);
+
+    // Reinitialize on window resize
+    window.addEventListener('resize', () => {
+        initializeMatrix();
+    });
+</script>
+
+</body>
+</html>
