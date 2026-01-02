@@ -198,9 +198,23 @@
         }
     }
 
-    // Initialize and start the animation
+    // Initialize and start the animation using requestAnimationFrame
     initializeMatrix();
-    setInterval(drawMatrix, 50);
+    let lastFrameTime = 0;
+    const targetFPS = 20; // Target 20 FPS for the Matrix effect
+    const frameInterval = 1000 / targetFPS;
+
+    function animate(currentTime) {
+        requestAnimationFrame(animate);
+        
+        const elapsed = currentTime - lastFrameTime;
+        if (elapsed > frameInterval) {
+            lastFrameTime = currentTime - (elapsed % frameInterval);
+            drawMatrix();
+        }
+    }
+    
+    requestAnimationFrame(animate);
 
     // Reinitialize on window resize
     window.addEventListener('resize', () => {
