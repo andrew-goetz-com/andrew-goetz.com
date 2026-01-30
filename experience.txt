@@ -1,0 +1,271 @@
+Contact
+5092900370 (Mobile)
+erax0r@outlook.com
+www.linkedin.com/in/andrewgoetz
+(LinkedIn)
+Top Skills
+Business Solutions Development
+Full Stack Software Development
+Prompt Engineering
+Languages
+PHP (Full Professional)
+C# (Full Professional)
+MSSQL (Full Professional)
+MySQL (Full Professional)
+Project Management (Full
+Professional)
+Creativity (Full Professional)
+Andrew Goetz
+IT Administrator @ ALK
+Spokane, Washington, United States
+Summary
+My recent endeavors have centered around developing a cuttingedge flutter application, leveraging firebase, google cloud platform,
+and the open AI API. This initiative demonstrates my commitment
+to innovation and user-centric design. At ALK, over the past two
+years, my role as an IT Administrator has allowed me to provide
+architectural guidance and spearhead the integration of AI into
+business solutions, showcasing my technical acumen and strategic
+insight.
+My technical toolkit, refined through practical application, includes
+Microsoft 365, OpenAI Products and proficiency in technologies such
+as python, databases, and HTML/JS/CSS. As part of an international
+team, I've contributed to deploying critical IT infrastructures
+and automating system administration tasks, ensuring efficient
+and secure operations. My work reflects a fusion of visionary AI
+development and solid IT expertise, all aimed at driving technological
+advancements and enhancing user experiences.
+Experience
+ALK
+IT Administrator
+January 2023 - Present (3 years 1 month)
+Post Falls, Idaho, United States
+• Provide technical guidance and architectural advice to line of business when
+implementing new solutions.
+• Implement new technologies onto the corporate network.
+• Collaborate with overseas colleagues to deploy new site's insfrasctructure.
+• Collaborate with local line of business to identify potential use cases for AI.
+• Develop automated scripts (powershell) to complete sys admin related tasks.
+• IT liaison between US line of business, global IT security, and infrastructure
+services.
+Page 1 of 7
+• Review IT security requirements with line of business for new technology
+requests.
+• Monitor SCOM alerts and react accordingly to various issues related to:
+Exchange 2019, SQL Server 2016-2022, and any other critical infrastructure
+SCOM alerts.
+• Assist global support team with escalated issues and advanced
+troubleshooting.
+• A member of the following subject matter expert groups: Power Platform,
+Exchange, meeting rooms, databases, Microsoft Teams.
+• Perform local disaster recovery testing for critical production systems using
+Veeam.
+• Create ad-hoc PowerShell scripts for various tasks related to performing
+automated tasks to save time, querying AD, Exchange, copying files, etc.
+Spokane Industries
+System Administrator
+February 2018 - January 2023 (5 years)
+Spokane, Washington Area
+• Migrated on-premises Exchange 2019 to Exchange online.
+• Deployed new instance of Microsoft 365 tenant including: SharePoint,
+OneDrive, Teams, Azure Active
+Directory, and Exchange Online.
+• Deployed Azure Active Directory Cloud Sync.
+• Deployed cloud based phone system. Ported 150 DID's and migrated all
+users to cloud system.
+• Migrated Barracuda Antispam on prem to Barracuda Cloud essentials.
+• Migrated Spiceworks ticketing system from on premises to cloud hosted.
+• Deployed Aruba wireless network leveraging Aruba Cloud Central
+administration.
+• System administrator for an office of over 100 employees.
+• End user support for all IT related issues for company employees
+(workstation, printers, phone, etc.).
+• Primary system administrator for entire infrastructure including: Group
+Policy, DHCP server, DNS server,
+Active Directory, VMware ESXi (with vcenter), and Palo Alto Firewall.
+• Deployed new Palo Alto PA-410 and migrated old PA-500 config with 0
+down time and minimal issues.
+• Migrated Exchange 2010 -> Exchange 2016 -> Exchange 2019 (on prem) ->
+Exchange Online Hybrid.
+• Migrated SharePoint 2010 to SharePoint 2016.
+Page 2 of 7
+• Administrator for Microsoft productivity suite including: Exchange 2019,
+SharePoint 2016, Active Directory,
+WSUS, and Group Policy Server.
+• RSA VPN administrator. Migrated RSA vpn appliance to VMware virtual
+machine.
+• Updated WDS deployment packages as new versions of Windows were
+released.
+• Migrated TFS 2013 to 2018.
+• Packaged and deployed silent unattended install for Syspro ERP and Crystal
+Reports.
+• Updated production website components using Joomla, PHP, and MySQL.
+• Migrated old company website from end of life linux host to Blue Host
+managed provider.
+• WSUS - deployment and maintenance.
+• Administrator for CRM and ERP application (Syspro).
+• Investigated and resolved SharePoint performance issues (converted live
+calls to table to hourly
+reporting tables).
+Goetz Solutions
+Owner
+March 2017 - March 2018 (1 year 1 month)
+Spokane, Washington Area
+• Home automation services using Home Assistant (YAML + Python).
+• Consumer IT services (desktop and laptop support).
+The Master's Touch, LLC
+Software Engineer
+August 2016 - April 2017 (9 months)
+Spokane, Washington Area
+• Developed new features and resolved defects for a public facing electronic
+notice system.
+• Ensured all new inputs were safe against SQL injection attacks.
+• Worked in a Linux, Apache, MySQL and PHP development environment with
+production hosted on AWS.
+• The front-end was driven with JavaScript and used the bootstrap framework
+with jQuery.
+• The back-end code was a heavily customized plugin for the Joomla PHP
+framework.
+Page 3 of 7
+• Worked on adding new admin pages for client search using MVC within
+Joomla.
+• Participated in conference calls with city and county officials gathering
+project requirements.
+• Documented new requirements and bug fix requirements in Microsoft TFS.
+• Submitted code to GIT repository via Visual Studio 2017.
+• Resolved existing performance issues by identifying code or SQL changes.
+• Implemented new indexes, better joins, and rewrote methods to creatively
+pull the relevant data while
+decreasing database impact.
+• Assisted as a back-up support resource answering customer’s technical
+related questions via email.
+ThroneIt
+Co-Founder
+April 2008 - December 2016 (8 years 9 months)
+Spokane, Washington Area
+Accomplishments
+• ThroneIt was originally a new idea conceptualized by myself to handle a
+problem I noticed with an online game called 'Defense of the Ancents (DotA).
+• ThroneIt paved the way for games like League of Legends, Heroes of
+Newerth, and DotA2).
+• Conceptualized the idea of an automated hosting bot for DotA. Server
+administrator for all of the web bots, databases, etc for all of the back-end
+processes for Throneit.com.
+• Grew the player base from 1 to over 600,000 members in 12 months.
+• Handpicked and trained several volunteer staff to manage the player base.
+Many of these members went on to be paid employees at Riot Games.
+• Created a tactical and effective organization system for staff members. This
+was critical in our expansion success and communication as an organization.
+(http://www.cogmap.com/chart/throneit/public/throneit)
+Imprezzio Inc.
+6 years 4 months
+Software Developer
+January 2013 - March 2016 (3 years 3 months)
+• Software development for a product that was being used in production of a
+fortune 500 company.
+• Development using various technologies including but not limited to: C#,
+MSSQL, MongoDB, .Net
+Page 4 of 7
+(4.0,4.5), and Adobe Flex.
+• I conceptualized and wrote a PHP + MySQL + jQuery solution.
+• Pushed web application code and database changes to production
+environment.
+• Provided Tier 3 level support to the Tier 2 and Tier 1 support
+representatives.
+Tier 2 Production Support
+May 2012 - January 2013 (9 months)
+• Researched and resolved support issues escalated from Tier 1 support.
+• Used an incident management tool to track, categorize, escalate as
+necessary, and close all incidents.
+• Provided technical leadership and training for lower level Technical Support
+Analysts.
+• Performed database research and problem resolution.
+• Provided support for user identified errors and system alarms and alerts.
+• Communicated with customers, support team, developers and project
+manager via email and phone.
+• Participated in conference calls and meetings with clients at the corporate
+level.
+• Provided support for internal products.
+• Documented processes and procedures used in daily activities.
+• Provided SQL driven ad-hoc ticket reports and shared on-call duties with the
+support team.
+Internal Support
+December 2009 - May 2012 (2 years 6 months)
+• Developed a very specific reporting website to provide ticket statistics and
+call metrics for the call
+center manager using MySQL, PHP, Apache / IIS, JavaScript and jQuery.
+• Developed various one-off applications for Imprezzio Marketing and
+Imprezzio Solutions in PHP, MySQL,
+Apache / IIS.
+• Deployed various MySQL instances and setup replication from PBX
+database (Linux) to PBX
+reporting database (Windows).
+• Identified a need for, architected, and developed a feature rich customer
+management application
+specifically for Imprezzio Marketing using PHP, MySQL, Apache / IIS,
+JavaScript, and jQuery.
+Page 5 of 7
+• Deployed Mind touch (internal Wiki) for Imprezzio Marketing. Currently being
+used as a critical
+internal documentation application. Later migrated this from Linux to
+Windows.
+• Wrote various database back-up scripts using batch files and robocopy /
+FTP.
+• Wrote database monitoring script to alert myself and other technicians of
+database loops.
+• Responsible for all workstation Windows updates for the corporate office and
+two remote offices using
+Microsoft SCCM.
+• Inspected and queried the fairly complex Microsoft SCCM database
+(MSSQL).
+• Responsible for pushing new applications via SCCM (Spark, Firefox, Flash,
+Java, etc.).
+• Added/modified users in Microsoft Exchange and Active Directory.
+• Worked with a veteran system administrator to deploy local sandbox
+environment for testing:
+Active Directory changes, software upgrades, and MySQL replication testing.
+• Executed and reviewed results of database lead import scripts/automated
+jobs.
+• Performed multiple Linux to Windows server migrations for critical internal
+software suites
+including: TimeTrex, Kayako, Openfire, and Adtools.
+• Researched hosting provider options and migrated several .NET driven
+websites from our internal
+server to a 3rd party hosted provider.
+• Provided general helpdesk support for all users within the company.
+Jigsaw
+Software Quality Assurance Engineer
+December 2007 - December 2009 (2 years 1 month)
+• Discovered, documented, and tested hundreds of critical defects on the
+production application.
+• Performed manual software testing, automated software testing, database
+analysis, and API testing.
+• Recipient of the MVP award for Q1 2008.
+• Large role in creation of support bug tracking and analysis system in
+Salesforce.com.
+Page 6 of 7
+• Assisted with customer support productivity tracking (report and process
+design).
+• Large role in creation of many current processes with the technical support
+department.
+• Resolved escalated customer service related issues involving upset
+customers and advanced
+technical issues.
+Circuit City
+2 years 6 months
+Technology Sales Manager
+June 2005 - June 2007 (2 years 1 month)
+Managed a team of 10 salespeople and 4 technical support specialists.
+Exceeded corporate sales expectations on a monthly basis both in pc installs
+and overall revenue.
+Lead In-Home PC Technician
+January 2005 - June 2005 (6 months)
+Network installation, network security configuration, hardware installation,
+hardware troubleshooting, software installation (windows 95 - vista), software
+troubleshooting (windows 95 - vista).
+Amerion LLC
+Technical Support Supervisor
+January 2004 - January 2005 (1 year 1 month)
+Network troubleshooting ranging from 56k modems - T1 connections including
+ISDN, DSL, WIFI. Lead a group of 10 support representatives in a support/
+billing call center environment.
+Page 7 of 7
