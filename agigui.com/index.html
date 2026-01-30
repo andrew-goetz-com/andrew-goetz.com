@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGIGUI LLC | AI Solutions for Small Business</title>
+    <meta name="description" content="AGIGUI LLC provides technology solutions and AI consulting for small businesses to improve workflow efficiencies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ffffff;
+            --secondary: #a8d4e6;
+            --accent: #7dd3fc;
+            --accent-glow: rgba(125, 211, 252, 0.4);
+            --background: #0a0e14;
+            --surface: rgba(255, 255, 255, 0.03);
+            --glass: rgba(125, 211, 252, 0.08);
+            --glass-border: rgba(125, 211, 252, 0.2);
+            --ice-gradient: linear-gradient(135deg, #0ea5e9, #38bdf8, #7dd3fc);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background);
+            background-image: 
+                radial-gradient(ellipse at 20% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(125, 211, 252, 0.05) 0%, transparent 70%);
+            background-attachment: fixed;
+            color: var(--primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.25rem 2rem;
+            background: rgba(10, 14, 20, 0.7);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            background: var(--ice-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+            background: linear-gradient(135deg, #ffffff 0%, #7dd3fc 50%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            color: var(--secondary);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--ice-gradient);
+            color: var(--background);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 50px var(--accent-glow), 0 0 80px rgba(125, 211, 252, 0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--secondary);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--surface);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--glass);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            transition: all 0.4s ease;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(125, 211, 252, 0.15);
+            border-color: var(--accent);
+            background: rgba(125, 211, 252, 0.12);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--ice-gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--background);
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--secondary);
+            font-size: 0.9375rem;
+            line-height: 1.6;
+        }
+
+        /* About Section */
+        .about {
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .founder {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding: 1.5rem 2rem;
+            background: var(--glass);
+            border-radius: 100px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .founder-avatar {
+            width: 56px;
+            height: 56px;
+            background: var(--ice-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--background);
+            font-weight: 600;
+            font-size: 1.25rem;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .founder-info {
+            text-align: left;
+        }
+
+        .founder-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .founder-title {
+            color: var(--secondary);
+            font-size: 0.875rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(180deg, transparent 0%, rgba(14, 165, 233, 0.1) 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+        }
+
+        .contact .section-title {
+            background: var(--ice-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact .section-subtitle {
+            color: var(--secondary);
+        }
+
+        .contact-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: transparent;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            border: 2px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .contact-cta:hover {
+            background: var(--ice-gradient);
+            color: var(--background);
+            transform: scale(1.05);
+            box-shadow: 0 0 40px var(--accent-glow);
+            border-color: transparent;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--secondary);
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.875rem;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 7rem 1.5rem 3rem;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            .service-card {
+                padding: 2rem;
+            }
+
+            .founder {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .founder-info {
+                text-align: center;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1,
+        .hero p,
+        .hero .cta-button {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero p {
+            animation-delay: 0.1s;
+        }
+
+        .hero .cta-button {
+            animation-delay: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">AGIGUI</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>AI-Powered Solutions for Your Business</h1>
+        <p>We help small businesses harness the power of artificial intelligence to streamline workflows and drive growth.</p>
+        <a href="#contact" class="cta-button">Get Started</a>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle">Simple, powerful solutions designed to transform how your business operates.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+                        </svg>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>Seamlessly integrate artificial intelligence into your existing workflows to automate repetitive tasks and unlock new efficiencies.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                        </svg>
+                    </div>
+                    <h3>Workflow Optimization</h3>
+                    <p>Identify bottlenecks and inefficiencies in your processes, then implement smart solutions that save time and reduce costs.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                        </svg>
+                    </div>
+                    <h3>Strategic Consulting</h3>
+                    <p>Get expert guidance on technology strategy tailored for small businesses. We help you make smart decisions that drive real results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Our Story</h2>
+            <div class="about-content">
+                <p>Founded in 2025, AGIGUI LLC was born from a simple belief: every small business deserves access to the transformative power of artificial intelligence. We bridge the gap between cutting-edge technology and practical business needs.</p>
+                <p>We don't just implement technology—we partner with you to understand your unique challenges and craft solutions that genuinely make a difference.</p>
+                
+                <div class="founder">
+                    <div class="founder-avatar">AG</div>
+                    <div class="founder-info">
+                        <div class="founder-name">Andrew Goetz</div>
+                        <div class="founder-title">Founder & CEO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Transform Your Business?</h2>
+            <p class="section-subtitle">Let's talk about how AI can work for you.</p>
+            <a href="mailto:hello@agigui.com" class="contact-cta">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AGIGUI LLC. All rights reserved.</p>
+    </footer>
+</body>
+</html>
